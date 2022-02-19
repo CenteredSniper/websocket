@@ -2,7 +2,7 @@
 const WebSocketServer = require('ws');
  
 // Creating a new websocket server
-const wss = new WebSocketServer.Server({ port: 6923 })
+const wss = new WebSocketServer.Server({ port: process.env.PORT || 6923 })
  
 // Creating connection using websocket
 wss.on("connection", ws => {
